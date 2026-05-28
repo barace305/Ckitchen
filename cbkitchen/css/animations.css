@@ -1,0 +1,376 @@
+/* ============================================================
+   CB KITCHEN — Animations & Motion Utilities
+   Keyframes, reveal classes, shimmer, parallax, a11y
+   ============================================================ */
+
+
+/* --------------------------------------------------------
+   KEYFRAMES — Fade Variants
+   -------------------------------------------------------- */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* --------------------------------------------------------
+   KEYFRAMES — Scale
+   -------------------------------------------------------- */
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+
+/* --------------------------------------------------------
+   KEYFRAMES — Shimmer (Gold Text Effect)
+   -------------------------------------------------------- */
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+
+/* --------------------------------------------------------
+   KEYFRAMES — Pulse
+   -------------------------------------------------------- */
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.85;
+  }
+}
+
+
+/* --------------------------------------------------------
+   KEYFRAMES — Float
+   -------------------------------------------------------- */
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+
+/* --------------------------------------------------------
+   KEYFRAMES — Slide In Stagger
+   -------------------------------------------------------- */
+
+@keyframes slideInStagger {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* --------------------------------------------------------
+   KEYFRAMES — Rotate (Decorative)
+   -------------------------------------------------------- */
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* --------------------------------------------------------
+   KEYFRAMES — Gold Border Glow
+   -------------------------------------------------------- */
+
+@keyframes borderGlow {
+  0%, 100% {
+    border-color: var(--border-gold);
+    box-shadow: 0 0 0 rgba(201, 169, 110, 0);
+  }
+  50% {
+    border-color: var(--gold);
+    box-shadow: 0 0 20px rgba(201, 169, 110, 0.15);
+  }
+}
+
+
+/* --------------------------------------------------------
+   SCROLL REVEAL CLASSES
+   -------------------------------------------------------- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity var(--transition-slow),
+              transform var(--transition-slow);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Direction Variants */
+.reveal--left {
+  transform: translateX(-30px);
+}
+
+.reveal--left.active {
+  transform: translateX(0);
+}
+
+.reveal--right {
+  transform: translateX(30px);
+}
+
+.reveal--right.active {
+  transform: translateX(0);
+}
+
+.reveal--scale {
+  transform: scale(0.9);
+}
+
+.reveal--scale.active {
+  transform: scale(1);
+}
+
+/* Stagger Delays */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+
+
+/* --------------------------------------------------------
+   SHIMMER TEXT
+   -------------------------------------------------------- */
+
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    var(--gold-dark) 0%,
+    var(--gold-light) 25%,
+    var(--gold) 50%,
+    var(--gold-light) 75%,
+    var(--gold-dark) 100%
+  );
+  background-size: 400% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s linear infinite;
+}
+
+
+/* --------------------------------------------------------
+   PARALLAX UTILITY
+   -------------------------------------------------------- */
+
+.parallax {
+  will-change: transform;
+  transform: translateZ(0);
+  transition: transform 0.1s linear;
+}
+
+.parallax--slow {
+  transition: transform 0.15s linear;
+}
+
+
+/* --------------------------------------------------------
+   ANIMATION UTILITIES
+   -------------------------------------------------------- */
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s var(--ease-out-expo) forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s var(--ease-out-expo) forwards;
+}
+
+.animate-slide-up {
+  animation: fadeInUp 0.6s var(--ease-out-expo) forwards;
+}
+
+.animate-slide-down {
+  animation: fadeInDown 0.6s var(--ease-out-expo) forwards;
+}
+
+
+/* --------------------------------------------------------
+   HOVER TRANSITIONS (Enhanced)
+   -------------------------------------------------------- */
+
+.hover-lift {
+  transition: transform var(--transition-base),
+              box-shadow var(--transition-base);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.hover-glow {
+  transition: box-shadow var(--transition-base);
+}
+
+.hover-glow:hover {
+  box-shadow: var(--shadow-gold-md);
+}
+
+.hover-scale {
+  transition: transform var(--transition-fast);
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+
+/* --------------------------------------------------------
+   PREFERS REDUCED MOTION — Accessibility
+   -------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .reveal--left,
+  .reveal--right,
+  .reveal--scale {
+    transform: none;
+  }
+
+  .shimmer-text {
+    animation: none;
+    background: var(--gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .parallax {
+    transform: none;
+    transition: none;
+  }
+
+  .hero__logo,
+  .hero__title,
+  .hero__tagline,
+  .hero__slogan,
+  .hero__buttons,
+  .hero__scroll {
+    opacity: 1;
+    animation: none;
+  }
+}

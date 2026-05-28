@@ -1,0 +1,396 @@
+/* ============================================================
+   CB KITCHEN — Contractor Quote Form
+   Form card, inputs, file upload, submit, success state
+   ============================================================ */
+
+
+/* --------------------------------------------------------
+   SECTION BASE
+   -------------------------------------------------------- */
+
+.quote-section {
+  background: var(--bg-secondary);
+}
+
+
+/* --------------------------------------------------------
+   FORM WRAPPER
+   -------------------------------------------------------- */
+
+.quote-form__wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .quote-form__wrapper {
+    padding: var(--space-2xl) var(--space-2xl);
+  }
+}
+
+/* Decorative top gradient line */
+.quote-form__wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-gold);
+}
+
+
+/* --------------------------------------------------------
+   FORM GRID
+   -------------------------------------------------------- */
+
+.quote-form__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 480px) {
+  .quote-form__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* --------------------------------------------------------
+   FORM GROUP
+   -------------------------------------------------------- */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group--full {
+  grid-column: 1 / -1;
+}
+
+
+/* --------------------------------------------------------
+   FORM LABELS
+   -------------------------------------------------------- */
+
+.form-label {
+  display: block;
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-sm);
+}
+
+.form-label .required {
+  color: var(--gold);
+}
+
+
+/* --------------------------------------------------------
+   INPUT STYLES
+   -------------------------------------------------------- */
+
+.form-input {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-fast),
+              box-shadow var(--transition-fast);
+}
+
+.form-input::placeholder {
+  color: var(--text-muted);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px var(--gold-glow);
+}
+
+.form-input:hover:not(:focus) {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+
+/* --------------------------------------------------------
+   SELECT STYLING
+   -------------------------------------------------------- */
+
+.form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  padding-right: 3rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23c9a96e' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1.25rem center;
+  background-size: 12px 8px;
+}
+
+.form-select option {
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+
+
+/* --------------------------------------------------------
+   TEXTAREA
+   -------------------------------------------------------- */
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: var(--lh-normal);
+}
+
+
+/* --------------------------------------------------------
+   FILE UPLOAD
+   -------------------------------------------------------- */
+
+.file-upload {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  min-height: 120px;
+  padding: var(--space-xl);
+  border: 2px dashed var(--border-gold);
+  border-radius: var(--radius-md);
+  background: var(--bg-primary);
+  cursor: pointer;
+  transition: border-color var(--transition-fast),
+              background var(--transition-fast);
+}
+
+.file-upload:hover {
+  border-color: var(--gold);
+  background: rgba(201, 169, 110, 0.03);
+}
+
+.file-upload__input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.file-upload__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  text-align: center;
+  pointer-events: none;
+}
+
+.file-upload__icon {
+  color: var(--gold);
+  opacity: 0.7;
+}
+
+.file-upload__text {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  margin-bottom: 0;
+}
+
+.file-upload__hint {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+/* Drag-over state */
+.file-upload--dragover {
+  border-color: var(--gold);
+  background: rgba(201, 169, 110, 0.06);
+}
+
+/* File list */
+.file-upload__list {
+  width: 100%;
+  margin-top: var(--space-sm);
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-xs);
+  font-size: var(--fs-sm);
+}
+
+.file-item__name {
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 250px;
+}
+
+.file-item__size {
+  color: var(--text-muted);
+  font-size: var(--fs-xs);
+}
+
+.file-item__remove {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: var(--fs-lg);
+  cursor: pointer;
+  padding: 0 var(--space-xs);
+  transition: color var(--transition-fast);
+  line-height: 1;
+}
+
+.file-item__remove:hover {
+  color: var(--error);
+}
+
+
+/* --------------------------------------------------------
+   SUBMIT BUTTON
+   -------------------------------------------------------- */
+
+.quote-form__submit {
+  width: 100%;
+  margin-top: var(--space-lg);
+  padding: 1.15rem 2.5rem;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--bg-primary);
+  background: var(--gold);
+  border: 1px solid var(--gold);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background var(--transition-base),
+              box-shadow var(--transition-base),
+              transform var(--transition-fast);
+}
+
+.quote-form__submit:hover {
+  background: var(--gold-light);
+  box-shadow: var(--shadow-gold-lg);
+  transform: translateY(-1px);
+}
+
+.quote-form__submit:active {
+  transform: translateY(0);
+}
+
+.quote-form__submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Loading state */
+.btn--loading .btn-text {
+  display: none;
+}
+
+.btn-loading {
+  display: none;
+}
+
+.btn--loading .btn-loading {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.spinner {
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+/* --------------------------------------------------------
+   FORM ERROR STATE
+   -------------------------------------------------------- */
+
+.form-group--error .form-input {
+  border-color: var(--error);
+}
+
+.form-group--error .form-input:focus {
+  box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.15);
+}
+
+.form-error {
+  font-size: var(--fs-xs);
+  color: var(--error);
+  margin-top: var(--space-xs);
+  min-height: 0;
+}
+
+
+/* --------------------------------------------------------
+   FORM SUCCESS / RESPONSE STATE
+   -------------------------------------------------------- */
+
+.quote-form__success {
+  text-align: center;
+  padding: var(--space-2xl);
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.quote-form__success:not([hidden]) {
+  display: flex;
+}
+
+.quote-form__success--visible {
+  animation: fadeInUp 0.6s var(--ease-out-expo) forwards;
+}
+
+.quote-form__success-icon {
+  color: var(--gold);
+}
+
+.quote-form__success h3 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-xl);
+  color: var(--text-primary);
+}
+
+.quote-form__success p {
+  color: var(--text-secondary);
+  font-size: var(--fs-base);
+  max-width: 400px;
+  margin-inline: auto;
+}

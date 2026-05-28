@@ -1,0 +1,187 @@
+/* ============================================================
+   CB KITCHEN — Quality Section
+   Two-column layout, quality points, decorative accents
+   ============================================================ */
+
+
+/* --------------------------------------------------------
+   SECTION BASE
+   -------------------------------------------------------- */
+
+.quality {
+  background: var(--bg-primary);
+}
+
+
+/* --------------------------------------------------------
+   TWO-COLUMN LAYOUT
+   -------------------------------------------------------- */
+
+.quality__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .quality__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+  }
+}
+
+
+/* --------------------------------------------------------
+   IMAGE COLUMN
+   -------------------------------------------------------- */
+
+.quality__image-wrapper {
+  position: relative;
+}
+
+.quality__image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-gold);
+}
+
+/* Decorative corner accent — top-left */
+.quality__image-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  width: 60px;
+  height: 60px;
+  border-top: 2px solid var(--gold);
+  border-left: 2px solid var(--gold);
+  border-radius: var(--radius-sm) 0 0 0;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Decorative corner accent — bottom-right */
+.quality__image-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  right: -12px;
+  width: 60px;
+  height: 60px;
+  border-bottom: 2px solid var(--gold);
+  border-right: 2px solid var(--gold);
+  border-radius: 0 0 var(--radius-sm) 0;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+
+/* --------------------------------------------------------
+   CONTENT COLUMN
+   -------------------------------------------------------- */
+
+.quality__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.quality__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-2xl);
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+@media (min-width: 768px) {
+  .quality__title {
+    font-size: var(--fs-3xl);
+  }
+}
+
+.quality__subtitle {
+  color: var(--text-secondary);
+  font-size: var(--fs-md);
+  margin-bottom: var(--space-lg);
+  line-height: var(--lh-relaxed);
+}
+
+
+/* --------------------------------------------------------
+   QUALITY POINTS LIST
+   -------------------------------------------------------- */
+
+.quality__points {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.quality__point {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  transition: background var(--transition-fast);
+}
+
+.quality__point:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Gold Icon / Checkmark */
+.quality__point-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--gold-glow);
+  color: var(--gold);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.quality__point-icon::before {
+  content: '✓';
+}
+
+/* Point Text */
+.quality__point-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.quality__point-title {
+  font-size: var(--fs-base);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.quality__point-description {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  line-height: var(--lh-normal);
+  margin-bottom: 0;
+}
+
+
+/* --------------------------------------------------------
+   DECORATIVE GOLD ACCENT LINE
+   -------------------------------------------------------- */
+
+.quality__accent {
+  width: 60px;
+  height: 2px;
+  background: var(--gradient-gold);
+  border-radius: var(--radius-full);
+  margin-top: var(--space-lg);
+}

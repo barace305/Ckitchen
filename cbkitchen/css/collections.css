@@ -1,0 +1,200 @@
+/* ============================================================
+   CB KITCHEN — Collections Section
+   Card grid, hover effects, responsive layout
+   ============================================================ */
+
+
+/* --------------------------------------------------------
+   SECTION BASE
+   -------------------------------------------------------- */
+
+.collections {
+  background: var(--bg-primary);
+}
+
+
+/* --------------------------------------------------------
+   COLLECTIONS GRID
+   -------------------------------------------------------- */
+
+.collections__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 480px) {
+  .collections__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .collections__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+  }
+}
+
+
+/* --------------------------------------------------------
+   COLLECTION CARD
+   -------------------------------------------------------- */
+
+.collection-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  aspect-ratio: 3 / 4;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: border-color var(--transition-base),
+              box-shadow var(--transition-base);
+}
+
+.collection-card:hover {
+  border-color: var(--border-gold);
+  box-shadow: var(--shadow-gold-md);
+}
+
+/* Card Image */
+.collection-card__image {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-base);
+}
+
+.collection-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.collection-card:hover .collection-card__image img {
+  transform: scale(1.08);
+}
+
+/* Card Overlay */
+.collection-card__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    transparent 30%,
+    rgba(0, 0, 0, 0.5) 60%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  transition: background var(--transition-base);
+}
+
+.collection-card:hover .collection-card__overlay {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0.6) 60%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+}
+
+/* Card Content */
+.collection-card__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  padding: var(--space-xl);
+  transform: translateY(8px);
+  transition: transform var(--transition-base);
+}
+
+.collection-card:hover .collection-card__content {
+  transform: translateY(0);
+}
+
+.collection-card__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: var(--space-xs);
+  transition: color var(--transition-fast);
+}
+
+@media (min-width: 1024px) {
+  .collection-card__title {
+    font-size: 1.3rem;
+  }
+}
+
+.collection-card__tag {
+  display: inline-block;
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gold);
+  margin-bottom: var(--space-sm);
+  opacity: 0.8;
+}
+
+.collection-card__desc {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  line-height: var(--lh-normal);
+  margin-bottom: var(--space-md);
+  opacity: 0.8;
+}
+
+/* Explore Link */
+.collection-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gold);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity var(--transition-base),
+              transform var(--transition-base),
+              gap var(--transition-fast);
+}
+
+.collection-card:hover .collection-card__link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.collection-card__link-arrow {
+  display: inline-block;
+  transition: transform var(--transition-fast);
+}
+
+.collection-card__link:hover .collection-card__link-arrow {
+  transform: translateX(4px);
+}
+
+/* Gold border glow on hover */
+.collection-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  border: 1px solid transparent;
+  z-index: 4;
+  pointer-events: none;
+  transition: border-color var(--transition-base),
+              box-shadow var(--transition-base);
+}
+
+.collection-card:hover::after {
+  border-color: var(--border-gold);
+  box-shadow: inset 0 0 30px rgba(201, 169, 110, 0.05);
+}

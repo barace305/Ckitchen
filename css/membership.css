@@ -1,0 +1,250 @@
+/* ============================================================
+   CB KITCHEN — Membership Section
+   Benefits grid, pricing card, responsive layout
+   ============================================================ */
+
+
+/* --------------------------------------------------------
+   SECTION BASE
+   -------------------------------------------------------- */
+
+.membership {
+  background: var(--bg-secondary);
+}
+
+
+/* --------------------------------------------------------
+   MEMBERSHIP GRID
+   -------------------------------------------------------- */
+
+.membership__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .membership__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+  }
+}
+
+
+/* --------------------------------------------------------
+   BENEFITS LIST
+   -------------------------------------------------------- */
+
+.membership__benefits {
+  display: flex;
+  flex-direction: column;
+}
+
+.membership__benefits-title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-xl);
+  margin-bottom: var(--space-lg);
+  color: var(--text-primary);
+}
+
+.membership__benefits-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.membership__benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: var(--space-lg) 0;
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background var(--transition-fast),
+              padding-left var(--transition-base);
+}
+
+.membership__benefit:first-child {
+  padding-top: 0;
+}
+
+.membership__benefit:last-child {
+  border-bottom: none;
+}
+
+.membership__benefit:hover {
+  padding-left: var(--space-sm);
+}
+
+/* Benefit Icon */
+.membership__benefit-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  background: var(--gold-glow);
+  border-radius: var(--radius-md);
+  margin-top: 2px;
+}
+
+.membership__benefit-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Benefit text */
+.membership__benefit h4 {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.membership__benefit p {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  line-height: var(--lh-normal);
+  margin-bottom: 0;
+}
+
+
+/* --------------------------------------------------------
+   PRICING CARD
+   -------------------------------------------------------- */
+
+.membership__pricing {
+  position: sticky;
+  top: 120px;
+}
+
+.membership__pricing-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: border-color var(--transition-base),
+              box-shadow var(--transition-base);
+}
+
+@media (min-width: 768px) {
+  .membership__pricing-card {
+    padding: var(--space-2xl) var(--space-2xl);
+  }
+}
+
+.membership__pricing-card:hover {
+  border-color: var(--border-gold-solid);
+  box-shadow: var(--shadow-gold-md);
+}
+
+/* Decorative top bar */
+.membership__pricing-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-gold);
+}
+
+/* Badge */
+.membership__pricing-badge {
+  display: inline-block;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gold);
+  margin-bottom: var(--space-lg);
+  padding: var(--space-xs) var(--space-md);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-full);
+}
+
+/* Price Display */
+.membership__pricing-amount {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 2px;
+  margin-bottom: var(--space-md);
+}
+
+.membership__pricing-currency {
+  font-family: var(--font-heading);
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.membership__pricing-number {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.membership__pricing-period {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  margin-left: var(--space-xs);
+}
+
+/* Description */
+.membership__pricing-desc {
+  color: var(--text-secondary);
+  font-size: var(--fs-sm);
+  margin-bottom: var(--space-xl);
+  line-height: var(--lh-normal);
+}
+
+/* Pricing Features List */
+.membership__pricing-features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+  text-align: left;
+}
+
+.membership__pricing-features li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.membership__pricing-features li:last-child {
+  border-bottom: none;
+}
+
+.membership__pricing-features li svg {
+  flex-shrink: 0;
+}
+
+/* CTA Button */
+.membership__pricing-btn {
+  width: 100%;
+  margin-bottom: var(--space-lg);
+}
+
+/* Fine Print */
+.membership__pricing-note {
+  color: var(--text-muted);
+  font-size: var(--fs-xs);
+  font-style: italic;
+  line-height: var(--lh-relaxed);
+  margin-bottom: 0;
+}

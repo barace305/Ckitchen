@@ -1,0 +1,215 @@
+/* ============================================================
+   CB KITCHEN — Private Catalog / Login Section
+   Glassmorphism card, lock icon, members badge, decorative bg
+   ============================================================ */
+
+
+/* --------------------------------------------------------
+   SECTION BASE
+   -------------------------------------------------------- */
+
+.catalog {
+  background: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* --------------------------------------------------------
+   DECORATIVE GRID PATTERN BACKGROUND
+   -------------------------------------------------------- */
+
+.catalog__pattern {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(201, 169, 110, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 169, 110, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: var(--z-base);
+}
+
+/* Radial fade to keep edges clean */
+.catalog__pattern::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 30%,
+    var(--bg-primary) 80%
+  );
+}
+
+
+/* --------------------------------------------------------
+   GLASS CARD
+   -------------------------------------------------------- */
+
+.catalog__card {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: var(--space-2xl);
+  background: rgba(26, 26, 26, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-xl);
+  transition: border-color var(--transition-base),
+              box-shadow var(--transition-base);
+}
+
+@media (min-width: 768px) {
+  .catalog__card {
+    padding: var(--space-3xl) var(--space-2xl);
+  }
+}
+
+.catalog__card:hover {
+  border-color: var(--border-gold-solid);
+  box-shadow: var(--shadow-gold-md);
+}
+
+
+/* --------------------------------------------------------
+   LOCK ICON
+   -------------------------------------------------------- */
+
+.catalog__lock {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto var(--space-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--gold-glow);
+  color: var(--gold);
+  font-size: var(--fs-2xl);
+  animation: catalogPulse 3s ease-in-out infinite;
+}
+
+@keyframes catalogPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(201, 169, 110, 0.15);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(201, 169, 110, 0);
+    transform: scale(1.04);
+  }
+}
+
+
+/* --------------------------------------------------------
+   MEMBERS ONLY BADGE
+   -------------------------------------------------------- */
+
+.catalog__badge {
+  display: inline-block;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gold);
+  background: rgba(201, 169, 110, 0.1);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-full);
+  padding: var(--space-xs) var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+
+/* --------------------------------------------------------
+   CARD TEXT
+   -------------------------------------------------------- */
+
+.catalog__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-2xl);
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .catalog__title {
+    font-size: var(--fs-3xl);
+  }
+}
+
+.catalog__description {
+  color: var(--text-secondary);
+  font-size: var(--fs-md);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-xl);
+  max-width: 460px;
+  margin-inline: auto;
+}
+
+
+/* --------------------------------------------------------
+   FEATURE PREVIEW LIST
+   -------------------------------------------------------- */
+
+.catalog__features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+  text-align: left;
+  max-width: 360px;
+  margin-inline: auto;
+}
+
+.catalog__feature {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  padding: var(--space-sm) 0;
+}
+
+.catalog__feature::before {
+  content: '✓';
+  color: var(--gold);
+  font-weight: 700;
+  font-size: var(--fs-sm);
+  flex-shrink: 0;
+}
+
+
+/* --------------------------------------------------------
+   LOGIN BUTTON
+   -------------------------------------------------------- */
+
+.catalog__cta {
+  width: 100%;
+  max-width: 300px;
+}
+
+
+/* --------------------------------------------------------
+   ADDITIONAL DECORATIVE ELEMENTS
+   -------------------------------------------------------- */
+
+/* Subtle gold glow behind card */
+.catalog__glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(201, 169, 110, 0.04) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: var(--z-base);
+}

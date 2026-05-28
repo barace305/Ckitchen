@@ -1,0 +1,298 @@
+/* ============================================================
+   CB KITCHEN — Hero Section
+   Full-viewport, overlay, centered content, scroll indicator
+   ============================================================ */
+
+
+/* --------------------------------------------------------
+   HERO CONTAINER
+   -------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 700px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+/* --------------------------------------------------------
+   BACKGROUND IMAGE & OVERLAY
+   -------------------------------------------------------- */
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-behind);
+}
+
+.hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.3) 40%,
+    rgba(0, 0, 0, 0.7) 80%,
+    rgba(10, 10, 10, 1) 100%
+  );
+  z-index: var(--z-base);
+}
+
+
+/* --------------------------------------------------------
+   HERO CONTENT
+   -------------------------------------------------------- */
+
+.hero__content {
+  position: relative;
+  z-index: var(--z-dropdown);
+  text-align: center;
+  max-width: 900px;
+  padding: var(--space-xl);
+}
+
+/* Logo in Hero */
+.hero__logo {
+  max-width: 160px;
+  margin: 0 auto var(--space-xl);
+  opacity: 0;
+  animation: fadeInUp 0.8s var(--ease-out-expo) 0.2s forwards;
+}
+
+@media (min-width: 768px) {
+  .hero__logo {
+    max-width: 200px;
+    margin-bottom: var(--space-2xl);
+  }
+}
+
+/* Main Title */
+.hero__title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--fs-2xl);
+  line-height: var(--lh-tight);
+  letter-spacing: 1px;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+  opacity: 0;
+  animation: fadeInUp 0.8s var(--ease-out-expo) 0.4s forwards;
+}
+
+@media (min-width: 768px) {
+  .hero__title {
+    font-size: var(--fs-4xl);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero__title {
+    font-size: var(--fs-5xl);
+  }
+}
+
+/* Tagline */
+.hero__tagline {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: var(--fs-md);
+  color: var(--gold);
+  margin-bottom: var(--space-md);
+  opacity: 0;
+  animation: fadeInUp 0.8s var(--ease-out-expo) 0.6s forwards;
+}
+
+@media (min-width: 768px) {
+  .hero__tagline {
+    font-size: var(--fs-lg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero__tagline {
+    font-size: 1.3rem;
+  }
+}
+
+/* Slogan / Description */
+.hero__slogan {
+  color: var(--text-secondary);
+  font-size: var(--fs-base);
+  line-height: var(--lh-relaxed);
+  max-width: 700px;
+  margin: 0 auto var(--space-xl);
+  opacity: 0;
+  animation: fadeInUp 0.8s var(--ease-out-expo) 0.8s forwards;
+}
+
+@media (min-width: 768px) {
+  .hero__slogan {
+    font-size: var(--fs-md);
+    margin-bottom: var(--space-2xl);
+  }
+}
+
+
+/* --------------------------------------------------------
+   HERO BUTTONS
+   -------------------------------------------------------- */
+
+.hero__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeInUp 0.8s var(--ease-out-expo) 1s forwards;
+}
+
+/* Primary Button */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: 1rem 2.5rem;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--bg-primary);
+  background: var(--gold);
+  border: 1px solid var(--gold);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: transform var(--transition-fast),
+              box-shadow var(--transition-base),
+              background var(--transition-base);
+}
+
+.btn-primary:hover {
+  background: var(--gold-light);
+  color: var(--bg-primary);
+  transform: scale(1.02);
+  box-shadow: var(--shadow-gold-lg);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid var(--gold-light);
+  outline-offset: 3px;
+}
+
+/* Secondary Button */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: 1rem 2.5rem;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gold);
+  background: transparent;
+  border: 1px solid var(--gold);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background var(--transition-base),
+              color var(--transition-base),
+              box-shadow var(--transition-base),
+              transform var(--transition-fast);
+}
+
+.btn-secondary:hover {
+  background: var(--gold);
+  color: var(--bg-primary);
+  box-shadow: var(--shadow-gold-md);
+}
+
+.btn-secondary:active {
+  transform: scale(0.98);
+}
+
+.btn-secondary:focus-visible {
+  outline: 2px solid var(--gold-light);
+  outline-offset: 3px;
+}
+
+
+/* --------------------------------------------------------
+   SCROLL INDICATOR
+   -------------------------------------------------------- */
+
+.hero__scroll-indicator {
+  position: absolute;
+  bottom: var(--space-2xl);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: var(--z-dropdown);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  opacity: 0;
+  animation: fadeInUp 0.8s var(--ease-out-expo) 1.4s forwards;
+}
+
+.hero__scroll-line {
+  width: 1px;
+  height: 40px;
+  background: var(--gold);
+  animation: scrollLine 2s ease-in-out infinite;
+}
+
+.hero__scroll-text {
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+}
+
+@keyframes scrollLine {
+  0%, 100% {
+    opacity: 1;
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  50% {
+    opacity: 0.3;
+    transform: scaleY(0.5);
+    transform-origin: top;
+  }
+}
+
+
+/* --------------------------------------------------------
+   HERO LOAD ANIMATION KEYFRAMES
+   -------------------------------------------------------- */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,172 @@
+/* ============================================================
+   CB KITCHEN — How It Works Section
+   Timeline steps, connecting line, hover, reveal animations
+   ============================================================ */
+
+
+/* --------------------------------------------------------
+   SECTION BASE
+   -------------------------------------------------------- */
+
+.how-it-works {
+  background: var(--bg-secondary);
+}
+
+
+/* --------------------------------------------------------
+   STEPS CONTAINER
+   -------------------------------------------------------- */
+
+.steps {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+  padding-left: var(--space-2xl);
+}
+
+@media (min-width: 768px) {
+  .steps {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 0;
+    gap: var(--space-lg);
+  }
+}
+
+
+/* --------------------------------------------------------
+   CONNECTING LINE
+   -------------------------------------------------------- */
+
+.steps__line {
+  position: absolute;
+  top: 30px;
+  bottom: 30px;
+  left: 29px;
+  width: 2px;
+  background: linear-gradient(
+    180deg,
+    var(--gold) 0%,
+    var(--gold-dark) 50%,
+    rgba(201, 169, 110, 0.2) 100%
+  );
+}
+
+/* Horizontal line — Desktop */
+@media (min-width: 768px) {
+  .steps__line {
+    top: 30px;
+    left: 60px;
+    right: 60px;
+    bottom: auto;
+    width: auto;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      var(--gold) 0%,
+      var(--gold-dark) 50%,
+      rgba(201, 169, 110, 0.2) 100%
+    );
+  }
+}
+
+
+/* --------------------------------------------------------
+   INDIVIDUAL STEP
+   -------------------------------------------------------- */
+
+.step {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--space-md);
+  z-index: var(--z-base);
+}
+
+@media (min-width: 768px) {
+  .step {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+
+/* --------------------------------------------------------
+   STEP NUMBER CIRCLE
+   -------------------------------------------------------- */
+
+.step__number {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  color: var(--gold);
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+  transition: background var(--transition-base),
+              color var(--transition-base),
+              box-shadow var(--transition-base),
+              transform var(--transition-fast);
+}
+
+.step:hover .step__number {
+  background: var(--gold);
+  color: var(--bg-primary);
+  box-shadow: var(--shadow-gold-md);
+  transform: scale(1.08);
+}
+
+
+/* --------------------------------------------------------
+   STEP TEXT
+   -------------------------------------------------------- */
+
+.step__content {
+  padding-top: var(--space-sm);
+}
+
+@media (min-width: 768px) {
+  .step__content {
+    padding-top: var(--space-lg);
+  }
+}
+
+.step__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-md);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+@media (min-width: 768px) {
+  .step__title {
+    font-size: 1.1rem;
+  }
+}
+
+.step__desc {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  line-height: var(--lh-normal);
+  max-width: 220px;
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .step__desc {
+    margin-inline: auto;
+  }
+}

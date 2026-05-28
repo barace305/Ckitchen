@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CB Kitchen — Private luxury kitchen sourcing network for contractors, builders, and developers. Access premium cabinets, custom-built kitchens, bathroom vanities, and cabinetry at exclusive contractor pricing.">
+    <meta name="keywords" content="luxury kitchen cabinets, contractor pricing, custom cabinets, bathroom vanities, kitchen sourcing, contractor network, premium cabinetry, CB Kitchen">
+    <meta name="author" content="CB Kitchen">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="CB Kitchen — Private Luxury Kitchen Network for Contractors">
+    <meta property="og:description" content="Premium kitchens, cabinetry, and bathroom solutions sourced for contractors who want better margins, better quality, and faster access.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cbkitchen.io">
+    <meta property="og:image" content="assets/images/hero-kitchen.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CB Kitchen — Private Luxury Kitchen Network for Contractors">
+    <meta name="twitter:description" content="Premium kitchens, cabinetry, and bathroom solutions sourced for contractors who want better margins, better quality, and faster access.">
+
+    <title>CB Kitchen — Private Luxury Kitchen Network for Contractors</title>
+
+    <!-- Favicon placeholder -->
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.jpg">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body class="loading">
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- HEADER / NAVIGATION                                        -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <header class="header" id="header">
+        <div class="header__container container">
+            <!-- Logo -->
+            <a href="#" class="header__logo" aria-label="CB Kitchen Home">
+                <img src="assets/images/logo.jpg" alt="CB Kitchen Logo" class="header__logo-img">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="header__nav" id="main-nav" aria-label="Main Navigation">
+                <ul class="header__nav-list">
+                    <li><a href="#hero" class="header__nav-link active">Home</a></li>
+                    <li><a href="#membership" class="header__nav-link">Membership</a></li>
+                    <li><a href="#collections" class="header__nav-link">Collections</a></li>
+                    <li><a href="#how-it-works" class="header__nav-link">How It Works</a></li>
+                    <li><a href="#quality" class="header__nav-link">Quality</a></li>
+                    <li><a href="#quote" class="header__nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- CTA Button -->
+            <a href="#membership" class="header__cta btn-outline" id="header-cta">Apply for Membership</a>
+
+            <!-- Hamburger Menu -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Overlay -->
+        <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+            <nav class="mobile-nav__inner" aria-label="Mobile Navigation">
+                <ul class="mobile-nav__list">
+                    <li><a href="#hero" class="mobile-nav__link">Home</a></li>
+                    <li><a href="#membership" class="mobile-nav__link">Membership</a></li>
+                    <li><a href="#collections" class="mobile-nav__link">Collections</a></li>
+                    <li><a href="#how-it-works" class="mobile-nav__link">How It Works</a></li>
+                    <li><a href="#quality" class="mobile-nav__link">Quality</a></li>
+                    <li><a href="#quote" class="mobile-nav__link">Contact</a></li>
+                </ul>
+                <a href="#membership" class="mobile-nav__cta btn-primary">Apply for Membership</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- HERO SECTION                                                -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="hero" id="hero">
+        <div class="hero__bg">
+            <img src="assets/images/hero-kitchen.png" alt="Luxury modern kitchen interior" class="hero__bg-img lazy">
+            <div class="hero__overlay"></div>
+        </div>
+
+        <div class="hero__content container">
+            <img src="assets/images/logo.jpg" alt="CB Kitchen" class="hero__logo reveal" data-delay="0">
+
+            <h1 class="hero__title reveal" data-delay="100">
+                Private Luxury Kitchen Network<br>
+                <span class="text-gold">for Contractors</span>
+            </h1>
+
+            <p class="hero__tagline reveal" data-delay="200">
+                Premium kitchens, cabinetry, and bathroom solutions sourced for contractors who want better margins, better quality, and faster access.
+            </p>
+
+            <p class="hero__slogan reveal" data-delay="300">
+                <span class="shimmer-text">Save and make contractors hundreds of thousands a year.</span>
+            </p>
+
+            <div class="hero__buttons reveal" data-delay="400">
+                <a href="#membership" class="btn-primary" id="hero-apply-btn">
+                    <span>Apply for Membership</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+                <a href="#quote" class="btn-secondary" id="hero-quote-btn">
+                    <span>Request a Quote</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="hero__scroll-indicator" aria-hidden="true">
+            <div class="hero__scroll-line"></div>
+            <span class="hero__scroll-text">Scroll</span>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- MEMBERSHIP SECTION                                          -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="membership section-padding" id="membership">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header reveal">
+                <div class="section-header__accent"></div>
+                <h2 class="section-header__title">Private Contractor <span class="text-gold">Network</span></h2>
+                <p class="section-header__subtitle">CB Kitchen is an exclusive private sourcing network built for contractors, builders, developers, and remodelers who demand premium quality at better margins.</p>
+            </div>
+
+            <div class="membership__grid">
+                <!-- Benefits List -->
+                <div class="membership__benefits reveal" data-delay="100">
+                    <h3 class="membership__benefits-title">Membership Benefits</h3>
+                    <ul class="membership__benefits-list">
+                        <li class="membership__benefit">
+                            <div class="membership__benefit-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                            </div>
+                            <div>
+                                <h4>Exclusive Contractor Pricing</h4>
+                                <p>Access pricing structures unavailable through retail channels</p>
+                            </div>
+                        </li>
+                        <li class="membership__benefit">
+                            <div class="membership__benefit-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            </div>
+                            <div>
+                                <h4>Private Catalog Access</h4>
+                                <p>Browse our curated collection of premium materials and finishes</p>
+                            </div>
+                        </li>
+                        <li class="membership__benefit">
+                            <div class="membership__benefit-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                            </div>
+                            <div>
+                                <h4>Priority Quotes</h4>
+                                <p>Get ahead in the queue with expedited quoting for members</p>
+                            </div>
+                        </li>
+                        <li class="membership__benefit">
+                            <div class="membership__benefit-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                            </div>
+                            <div>
+                                <h4>Global Sourcing Relationships</h4>
+                                <p>Leverage our international manufacturing partnerships</p>
+                            </div>
+                        </li>
+                        <li class="membership__benefit">
+                            <div class="membership__benefit-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
+                            </div>
+                            <div>
+                                <h4>Quality Assurance Support</h4>
+                                <p>Our team inspects and verifies every supplier partnership</p>
+                            </div>
+                        </li>
+                        <li class="membership__benefit">
+                            <div class="membership__benefit-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                            </div>
+                            <div>
+                                <h4>Logistics Coordination</h4>
+                                <p>End-to-end shipping, tracking, and delivery management</p>
+                            </div>
+                        </li>
+                        <li class="membership__benefit">
+                            <div class="membership__benefit-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            </div>
+                            <div>
+                                <h4>Dedicated Project Support</h4>
+                                <p>Personal account management for every project</p>
+                            </div>
+                        </li>
+                        <li class="membership__benefit">
+                            <div class="membership__benefit-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                            </div>
+                            <div>
+                                <h4>Premium Kitchen & Bath Options</h4>
+                                <p>Full range of luxury kitchen cabinets, vanities, and cabinetry</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Pricing Card -->
+                <div class="membership__pricing reveal" data-delay="200">
+                    <div class="membership__pricing-card">
+                        <div class="membership__pricing-badge">Contractor Access</div>
+                        <div class="membership__pricing-amount">
+                            <span class="membership__pricing-currency">$</span>
+                            <span class="membership__pricing-number">99</span>
+                            <span class="membership__pricing-period">/month</span>
+                        </div>
+                        <p class="membership__pricing-desc">Everything you need to source premium kitchens and cabinetry at better margins.</p>
+                        <ul class="membership__pricing-features">
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                                Private Catalog Access
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                                Unlimited Quote Requests
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                                Supplier Pricing Access
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                                Dedicated Project Support
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                                Priority Quote Processing
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                                Logistics & Shipping Coordination
+                            </li>
+                        </ul>
+                        <a href="#quote" class="btn-primary membership__pricing-btn" id="membership-apply-btn">Apply for Membership</a>
+                        <p class="membership__pricing-note">Membership gives access to private catalog, quote requests, supplier pricing opportunities, and project support. Final pricing depends on project size, materials, shipping, and customization.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- COLLECTIONS SECTION                                         -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="collections section-padding" id="collections">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header reveal">
+                <div class="section-header__accent"></div>
+                <h2 class="section-header__title">Premium <span class="text-gold">Collections</span></h2>
+                <p class="section-header__subtitle">Explore our curated categories of luxury kitchen, bath, and cabinetry solutions — sourced from trusted international manufacturers.</p>
+            </div>
+
+            <div class="collections__grid">
+                <!-- Luxury Kitchens -->
+                <div class="collection-card reveal" data-delay="0">
+                    <div class="collection-card__image">
+                        <img src="assets/images/collection-luxury-kitchens.png" alt="Luxury Kitchens" class="lazy">
+                    </div>
+                    <div class="collection-card__overlay"></div>
+                    <div class="collection-card__content">
+                        <span class="collection-card__tag">Premium</span>
+                        <h3 class="collection-card__title">Luxury Kitchens</h3>
+                        <p class="collection-card__desc">Full custom kitchen builds with premium materials, finishes, and hardware.</p>
+                        <span class="collection-card__link">
+                            Explore Collection
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Custom Cabinets -->
+                <div class="collection-card reveal" data-delay="100">
+                    <div class="collection-card__image">
+                        <img src="assets/images/collection-custom-cabinets.png" alt="Custom Cabinets" class="lazy">
+                    </div>
+                    <div class="collection-card__overlay"></div>
+                    <div class="collection-card__content">
+                        <span class="collection-card__tag">Bespoke</span>
+                        <h3 class="collection-card__title">Custom Cabinets</h3>
+                        <p class="collection-card__desc">Tailored cabinetry solutions built to your exact specifications and design vision.</p>
+                        <span class="collection-card__link">
+                            Explore Collection
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Bathroom Vanities -->
+                <div class="collection-card reveal" data-delay="200">
+                    <div class="collection-card__image">
+                        <img src="assets/images/collection-bathroom-vanities.png" alt="Bathroom Vanities" class="lazy">
+                    </div>
+                    <div class="collection-card__overlay"></div>
+                    <div class="collection-card__content">
+                        <span class="collection-card__tag">Luxury Bath</span>
+                        <h3 class="collection-card__title">Bathroom Vanities</h3>
+                        <p class="collection-card__desc">Premium vanity units with marble, quartz, and custom finish options.</p>
+                        <span class="collection-card__link">
+                            Explore Collection
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Walk-In Closets -->
+                <div class="collection-card reveal" data-delay="300">
+                    <div class="collection-card__image">
+                        <img src="assets/images/collection-walkin-closets.png" alt="Walk-In Closets" class="lazy">
+                    </div>
+                    <div class="collection-card__overlay"></div>
+                    <div class="collection-card__content">
+                        <span class="collection-card__tag">Organization</span>
+                        <h3 class="collection-card__title">Walk-In Closets</h3>
+                        <p class="collection-card__desc">Custom closet systems with premium shelving, lighting, and hardware.</p>
+                        <span class="collection-card__link">
+                            Explore Collection
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Commercial / Multi-Unit -->
+                <div class="collection-card reveal" data-delay="400">
+                    <div class="collection-card__image">
+                        <img src="assets/images/collection-commercial.png" alt="Commercial and Multi-Unit Projects" class="lazy">
+                    </div>
+                    <div class="collection-card__overlay"></div>
+                    <div class="collection-card__content">
+                        <span class="collection-card__tag">Commercial</span>
+                        <h3 class="collection-card__title">Commercial / Multi-Unit</h3>
+                        <p class="collection-card__desc">Scalable kitchen and cabinetry solutions for multi-unit and commercial developments.</p>
+                        <span class="collection-card__link">
+                            Explore Collection
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Future Home Collections -->
+                <div class="collection-card reveal" data-delay="500">
+                    <div class="collection-card__image">
+                        <img src="assets/images/collection-future-home.png" alt="Future Home Collections" class="lazy">
+                    </div>
+                    <div class="collection-card__overlay"></div>
+                    <div class="collection-card__content">
+                        <span class="collection-card__tag">Coming Soon</span>
+                        <h3 class="collection-card__title">Future Home Collections</h3>
+                        <p class="collection-card__desc">Next-generation smart home kitchen concepts and integrated living solutions.</p>
+                        <span class="collection-card__link">
+                            Coming Soon
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- HOW IT WORKS SECTION                                        -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="how-it-works section-padding" id="how-it-works">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header reveal">
+                <div class="section-header__accent"></div>
+                <h2 class="section-header__title">How It <span class="text-gold">Works</span></h2>
+                <p class="section-header__subtitle">This is not a simple add-to-cart store. CB Kitchen is a quote-based, custom sourcing network built for professional contractors.</p>
+            </div>
+
+            <div class="steps">
+                <div class="steps__line" aria-hidden="true"></div>
+
+                <div class="step reveal" data-delay="0">
+                    <div class="step__number">01</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Join the Private Network</h3>
+                        <p class="step__desc">Apply for membership and gain access to our exclusive contractor sourcing platform.</p>
+                    </div>
+                </div>
+
+                <div class="step reveal" data-delay="150">
+                    <div class="step__number">02</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Submit Your Project Details</h3>
+                        <p class="step__desc">Share your project specs, finishes, quantities, and timeline with our team.</p>
+                    </div>
+                </div>
+
+                <div class="step reveal" data-delay="300">
+                    <div class="step__number">03</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Receive a Custom Quote</h3>
+                        <p class="step__desc">We source options from our verified manufacturing partners and deliver a tailored quote.</p>
+                    </div>
+                </div>
+
+                <div class="step reveal" data-delay="450">
+                    <div class="step__number">04</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Production & Quality Review</h3>
+                        <p class="step__desc">Your order enters production with quality checkpoints throughout the manufacturing process.</p>
+                    </div>
+                </div>
+
+                <div class="step reveal" data-delay="600">
+                    <div class="step__number">05</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Shipping & Delivery Coordination</h3>
+                        <p class="step__desc">We coordinate logistics from factory to your job site, with tracking and support at every stage.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- QUALITY ASSURANCE SECTION                                   -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="quality section-padding" id="quality">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header reveal">
+                <div class="section-header__accent"></div>
+                <h2 class="section-header__title">Quality <span class="text-gold">Assurance</span></h2>
+                <p class="section-header__subtitle">We don't just source products — we build verified, long-term partnerships with manufacturers who meet our standards.</p>
+            </div>
+
+            <div class="quality__grid">
+                <!-- Image Side -->
+                <div class="quality__image reveal" data-delay="100">
+                    <div class="quality__image-wrapper">
+                        <img src="assets/images/quality-inspection.png" alt="Quality inspection of premium kitchen cabinets" class="lazy">
+                        <div class="quality__image-accent"></div>
+                    </div>
+                </div>
+
+                <!-- Content Side -->
+                <div class="quality__content reveal" data-delay="200">
+                    <div class="quality__point">
+                        <div class="quality__point-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
+                        </div>
+                        <div>
+                            <h3>Personal Supplier Inspections</h3>
+                            <p>We travel internationally to inspect suppliers, tour factories, and verify production capabilities before establishing any partnership.</p>
+                        </div>
+                    </div>
+
+                    <div class="quality__point">
+                        <div class="quality__point-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                        </div>
+                        <div>
+                            <h3>Verified Quality Standards</h3>
+                            <p>Every supplier is vetted for material quality, construction methods, and finish consistency before we build long-term partnerships.</p>
+                        </div>
+                    </div>
+
+                    <div class="quality__point">
+                        <div class="quality__point-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                        </div>
+                        <div>
+                            <h3>Premium Materials & Packaging</h3>
+                            <p>We focus on premium wood, hardware, finishes, and protective packaging to ensure products arrive in perfect condition.</p>
+                        </div>
+                    </div>
+
+                    <div class="quality__point">
+                        <div class="quality__point-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <div>
+                            <h3>Reduced Delays & Damage</h3>
+                            <p>Our processes are designed to minimize production delays, shipping damage, and quality inconsistencies.</p>
+                        </div>
+                    </div>
+
+                    <div class="quality__point">
+                        <div class="quality__point-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <div>
+                            <h3>Long-Term Contractor Relationships</h3>
+                            <p>We're not interested in one-time sales. Our goal is building lasting partnerships with contractors who return project after project.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- CONTRACTOR QUOTE FORM SECTION                               -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="quote-section section-padding" id="quote">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header reveal">
+                <div class="section-header__accent"></div>
+                <h2 class="section-header__title">Submit Your <span class="text-gold">Project</span></h2>
+                <p class="section-header__subtitle">Tell us about your project and we'll prepare a custom quote tailored to your specifications, timeline, and budget.</p>
+            </div>
+
+            <div class="quote-form__wrapper reveal" data-delay="100">
+                <form class="quote-form" id="quote-form" novalidate>
+                    <div class="quote-form__grid">
+                        <!-- Name -->
+                        <div class="form-group" id="form-group-name">
+                            <label for="quote-name" class="form-label">Full Name <span class="required">*</span></label>
+                            <input type="text" id="quote-name" name="name" class="form-input" placeholder="Your full name" required>
+                            <span class="form-error" id="error-name"></span>
+                        </div>
+
+                        <!-- Company -->
+                        <div class="form-group" id="form-group-company">
+                            <label for="quote-company" class="form-label">Company Name <span class="required">*</span></label>
+                            <input type="text" id="quote-company" name="company" class="form-input" placeholder="Your company name" required>
+                            <span class="form-error" id="error-company"></span>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="form-group" id="form-group-phone">
+                            <label for="quote-phone" class="form-label">Phone <span class="required">*</span></label>
+                            <input type="tel" id="quote-phone" name="phone" class="form-input" placeholder="(555) 123-4567" required>
+                            <span class="form-error" id="error-phone"></span>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group" id="form-group-email">
+                            <label for="quote-email" class="form-label">Email <span class="required">*</span></label>
+                            <input type="email" id="quote-email" name="email" class="form-input" placeholder="you@company.com" required>
+                            <span class="form-error" id="error-email"></span>
+                        </div>
+
+                        <!-- City / State -->
+                        <div class="form-group form-group--full" id="form-group-location">
+                            <label for="quote-location" class="form-label">City / State</label>
+                            <input type="text" id="quote-location" name="location" class="form-input" placeholder="City, State">
+                        </div>
+
+                        <!-- Project Type -->
+                        <div class="form-group" id="form-group-project-type">
+                            <label for="quote-project-type" class="form-label">Project Type <span class="required">*</span></label>
+                            <select id="quote-project-type" name="projectType" class="form-input form-select" required>
+                                <option value="" disabled selected>Select project type</option>
+                                <option value="kitchen">Kitchen</option>
+                                <option value="bathroom">Bathroom</option>
+                                <option value="cabinets">Cabinets</option>
+                                <option value="multi-unit">Multi-Unit</option>
+                                <option value="commercial">Commercial</option>
+                                <option value="closets">Walk-In Closets</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <span class="form-error" id="error-project-type"></span>
+                        </div>
+
+                        <!-- Estimated Budget -->
+                        <div class="form-group" id="form-group-budget">
+                            <label for="quote-budget" class="form-label">Estimated Budget</label>
+                            <select id="quote-budget" name="budget" class="form-input form-select">
+                                <option value="" disabled selected>Select budget range</option>
+                                <option value="under-25k">Under $25,000</option>
+                                <option value="25k-50k">$25,000 – $50,000</option>
+                                <option value="50k-100k">$50,000 – $100,000</option>
+                                <option value="100k-250k">$100,000 – $250,000</option>
+                                <option value="250k-500k">$250,000 – $500,000</option>
+                                <option value="500k-plus">$500,000+</option>
+                            </select>
+                        </div>
+
+                        <!-- Timeline -->
+                        <div class="form-group form-group--full" id="form-group-timeline">
+                            <label for="quote-timeline" class="form-label">Project Timeline</label>
+                            <select id="quote-timeline" name="timeline" class="form-input form-select">
+                                <option value="" disabled selected>Select timeline</option>
+                                <option value="asap">ASAP</option>
+                                <option value="1-3-months">1 – 3 Months</option>
+                                <option value="3-6-months">3 – 6 Months</option>
+                                <option value="6-12-months">6 – 12 Months</option>
+                                <option value="planning">Still in Planning</option>
+                            </select>
+                        </div>
+
+                        <!-- File Upload -->
+                        <div class="form-group form-group--full" id="form-group-files">
+                            <label class="form-label">Upload Inspiration Photos or Plans</label>
+                            <div class="file-upload" id="file-upload-area">
+                                <input type="file" id="quote-files" name="files" class="file-upload__input" multiple accept="image/*,.pdf">
+                                <div class="file-upload__content">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="file-upload__icon">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                        <polyline points="17 8 12 3 7 8"/>
+                                        <line x1="12" y1="3" x2="12" y2="15"/>
+                                    </svg>
+                                    <p class="file-upload__text">Drag & drop files here or <span class="text-gold">browse</span></p>
+                                    <p class="file-upload__hint">Images & PDFs, max 10MB each, up to 5 files</p>
+                                </div>
+                                <div class="file-upload__list" id="file-list"></div>
+                            </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="form-group form-group--full" id="form-group-message">
+                            <label for="quote-message" class="form-label">Project Details & Message</label>
+                            <textarea id="quote-message" name="message" class="form-input form-textarea" rows="5" placeholder="Tell us about your project — dimensions, materials, finishes, quantities, special requirements..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Submit -->
+                    <button type="submit" class="btn-primary quote-form__submit" id="quote-submit-btn">
+                        <span class="btn-text">Submit Project for Review</span>
+                        <span class="btn-loading" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" class="spinner"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="31.4" stroke-linecap="round"/></svg>
+                            Processing...
+                        </span>
+                    </button>
+                </form>
+
+                <!-- Success Message (hidden by default) -->
+                <div class="quote-form__success" id="form-success" hidden>
+                    <div class="quote-form__success-icon">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                    </div>
+                    <h3>Project Submitted Successfully</h3>
+                    <p>Thank you for your submission. Our team will review your project details and respond with a custom quote within 24–48 business hours.</p>
+                    <a href="#" class="btn-secondary" id="form-reset-btn">Submit Another Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- PRIVATE CATALOG / MEMBER LOGIN SECTION                      -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="catalog section-padding" id="catalog">
+        <div class="container">
+            <div class="catalog__card reveal">
+                <!-- Decorative Grid Background -->
+                <div class="catalog__pattern" aria-hidden="true"></div>
+
+                <div class="catalog__badge">Members Only</div>
+
+                <div class="catalog__lock-icon" aria-hidden="true">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        <circle cx="12" cy="16" r="1"/>
+                    </svg>
+                </div>
+
+                <h2 class="catalog__title">Private <span class="text-gold">Catalog</span></h2>
+                <p class="catalog__desc">Access our full product catalog, material options, pricing sheets, and shipping estimates. Available exclusively to verified CB Kitchen members.</p>
+
+                <ul class="catalog__features">
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        Private Product Catalog
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        Material & Finish Options
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        Contractor Pricing Sheets
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        Shipping Estimates
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        Project Quote History
+                    </li>
+                </ul>
+
+                <a href="#membership" class="btn-primary catalog__btn" id="catalog-login-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    <span>Member Login</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- FOOTER                                                      -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <footer class="footer" id="footer">
+        <div class="footer__top-line" aria-hidden="true"></div>
+
+        <div class="container">
+            <div class="footer__grid">
+                <!-- Brand Column -->
+                <div class="footer__brand">
+                    <img src="assets/images/logo.jpg" alt="CB Kitchen" class="footer__logo">
+                    <p class="footer__brand-name">CB Kitchen</p>
+                    <p class="footer__brand-full">Custom Built Kitchen</p>
+                    <p class="footer__brand-tagline">Luxury Contractor Network</p>
+                    <p class="footer__brand-desc">Private luxury sourcing network for contractors, builders, and developers who demand premium quality at better margins.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer__links">
+                    <h4 class="footer__heading">Quick Links</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#membership">Membership</a></li>
+                        <li><a href="#collections">Collections</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#quality">Quality</a></li>
+                        <li><a href="#quote">Request a Quote</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="footer__links">
+                    <h4 class="footer__heading">Services</h4>
+                    <ul>
+                        <li><a href="#collections">Luxury Kitchens</a></li>
+                        <li><a href="#collections">Custom Cabinets</a></li>
+                        <li><a href="#collections">Bathroom Vanities</a></li>
+                        <li><a href="#collections">Walk-In Closets</a></li>
+                        <li><a href="#collections">Commercial Projects</a></li>
+                        <li><a href="#catalog">Private Catalog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer__contact">
+                    <h4 class="footer__heading">Contact</h4>
+                    <ul>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                            <a href="https://cbkitchen.io" target="_blank">CBKitchen.io</a>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <a href="mailto:info@cbkitchen.io">info@cbkitchen.io</a>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <a href="tel:+1234567890">(123) 456-7890</a>
+                        </li>
+                    </ul>
+
+                    <!-- Social Icons -->
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="LinkedIn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="YouTube">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-inner">
+                    <p class="footer__copyright">© <span id="footer-year">2026</span> CB Kitchen. All rights reserved.</p>
+                    <div class="footer__bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="js/animations.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

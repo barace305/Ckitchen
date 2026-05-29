@@ -51,14 +51,11 @@
 }
 
 .footer__logo {
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
-}
-
-.footer__logo img {
-  max-height: 40px;
+  max-height: 55px;
   width: auto;
+  display: block;
+  object-fit: contain;
+  margin-bottom: var(--space-xs);
 }
 
 .footer__logo-text {

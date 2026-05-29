@@ -52,13 +52,13 @@
 }
 
 .header__logo-img {
-  max-height: 105px;
+  max-height: 160px;
   width: auto;
   transition: max-height var(--transition-base);
 }
 
 .header--scrolled .header__logo-img {
-  max-height: 75px;
+  max-height: 95px;
 }
 
 

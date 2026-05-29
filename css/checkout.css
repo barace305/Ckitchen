@@ -32,9 +32,8 @@
 }
 
 .checkout-header__logo-img {
-  max-height: 44px;
+  max-height: 85px;
   width: auto;
-  border-radius: var(--radius-sm);
 }
 
 .checkout-header__back {

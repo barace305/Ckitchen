@@ -60,12 +60,13 @@
   z-index: var(--z-dropdown);
   text-align: center;
   max-width: 900px;
-  padding: 125px var(--space-md) var(--space-md);
+  padding: 135px var(--space-md) var(--space-md);
 }
 
 /* Logo in Hero */
 .hero__logo {
-  max-width: 180px;
+  width: 180px;
+  height: auto;
   margin: 0 auto 1.5rem;
   opacity: 0;
   animation: fadeInUp 0.8s var(--ease-out-expo) 0.2s forwards;
@@ -73,7 +74,7 @@
 
 @media (min-width: 768px) {
   .hero__logo {
-    max-width: 280px;
+    width: 320px;
     margin-bottom: 2rem;
   }
 }
@@ -93,13 +94,13 @@
 
 @media (min-width: 768px) {
   .hero__title {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
   }
 }
 
 @media (min-width: 1024px) {
   .hero__title {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 }
 

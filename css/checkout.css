@@ -1,0 +1,1169 @@
+/* ============================================================
+   CB KITCHEN — Checkout Page Styles
+   Multi-step membership checkout, payment form, confirmation
+   ============================================================ */
+
+
+/* --------------------------------------------------------
+   CHECKOUT HEADER
+   -------------------------------------------------------- */
+
+.checkout-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-gold);
+  padding: var(--space-md) 0;
+}
+
+.checkout-header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkout-header__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.checkout-header__logo-img {
+  max-height: 44px;
+  width: auto;
+  border-radius: var(--radius-sm);
+}
+
+.checkout-header__back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.checkout-header__back:hover {
+  color: var(--gold);
+}
+
+.checkout-header__back svg {
+  transition: transform var(--transition-fast);
+}
+
+.checkout-header__back:hover svg {
+  transform: translateX(-3px);
+}
+
+
+/* --------------------------------------------------------
+   CHECKOUT MAIN
+   -------------------------------------------------------- */
+
+.checkout-main {
+  min-height: calc(100vh - 200px);
+  padding: var(--space-2xl) 0 var(--space-4xl);
+}
+
+
+/* --------------------------------------------------------
+   PAGE TITLE
+   -------------------------------------------------------- */
+
+.checkout-title {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.checkout-title .section-header__accent {
+  margin-bottom: var(--space-lg);
+}
+
+.checkout-title__heading {
+  font-family: var(--font-heading);
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+}
+
+@media (min-width: 768px) {
+  .checkout-title__heading {
+    font-size: var(--fs-3xl);
+  }
+}
+
+.checkout-title__sub {
+  font-family: var(--font-accent);
+  font-size: var(--fs-md);
+  color: var(--text-secondary);
+  font-style: italic;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+
+/* --------------------------------------------------------
+   STEP INDICATOR
+   -------------------------------------------------------- */
+
+.step-indicator {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: var(--space-2xl);
+  position: relative;
+  max-width: 500px;
+  margin-inline: auto;
+  padding: 0 var(--space-md);
+}
+
+/* Track line behind circles */
+.step-indicator__track {
+  position: absolute;
+  top: 20px;
+  left: calc(16.67% + 20px);
+  right: calc(16.67% + 20px);
+  height: 2px;
+  background: var(--border-subtle);
+  z-index: 0;
+}
+
+.step-indicator__progress {
+  height: 100%;
+  width: 0%;
+  background: var(--gradient-gold);
+  border-radius: var(--radius-full);
+  transition: width 0.6s var(--ease-out-expo);
+}
+
+.step-indicator__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.step-indicator__circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-card);
+  border: 2px solid var(--border-subtle);
+  transition: border-color var(--transition-base),
+              background var(--transition-base),
+              box-shadow var(--transition-base);
+}
+
+.step-indicator__number {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: color var(--transition-base);
+}
+
+.step-indicator__check {
+  display: none;
+}
+
+.step-indicator__label {
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color var(--transition-base);
+  white-space: nowrap;
+}
+
+/* Active state */
+.step-indicator__step.active .step-indicator__circle {
+  border-color: var(--gold);
+  background: rgba(201, 169, 110, 0.1);
+  box-shadow: 0 0 0 4px var(--gold-glow);
+}
+
+.step-indicator__step.active .step-indicator__number {
+  color: var(--gold);
+}
+
+.step-indicator__step.active .step-indicator__label {
+  color: var(--gold);
+}
+
+/* Completed state */
+.step-indicator__step.completed .step-indicator__circle {
+  border-color: var(--gold);
+  background: var(--gold);
+}
+
+.step-indicator__step.completed .step-indicator__number {
+  display: none;
+}
+
+.step-indicator__step.completed .step-indicator__check {
+  display: block;
+  color: var(--bg-primary);
+}
+
+.step-indicator__step.completed .step-indicator__label {
+  color: var(--text-secondary);
+}
+
+
+/* --------------------------------------------------------
+   CHECKOUT STEPS
+   -------------------------------------------------------- */
+
+.checkout-step {
+  display: none;
+  animation: stepFadeIn 0.5s var(--ease-out-expo) forwards;
+}
+
+.checkout-step--active {
+  display: block;
+}
+
+@keyframes stepFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* --------------------------------------------------------
+   CALLOUT BOX (Founding Member)
+   -------------------------------------------------------- */
+
+.callout-box {
+  background: var(--bg-card);
+  border: 1px solid var(--gold);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl) var(--space-lg);
+  margin-bottom: var(--space-2xl);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.callout-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-gold);
+}
+
+.callout-box::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at top center, rgba(201, 169, 110, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+@media (min-width: 768px) {
+  .callout-box {
+    padding: var(--space-2xl);
+  }
+}
+
+.callout-box__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gold);
+  background: rgba(201, 169, 110, 0.1);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-gold);
+  margin-bottom: var(--space-lg);
+  position: relative;
+  z-index: 1;
+}
+
+.callout-box__price {
+  font-family: var(--font-heading);
+  font-size: var(--fs-4xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+  position: relative;
+  z-index: 1;
+}
+
+.callout-box__price span {
+  font-size: var(--fs-lg);
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.callout-box__lock {
+  font-size: var(--fs-base);
+  color: var(--text-secondary);
+  max-width: 480px;
+  margin: 0 auto var(--space-lg);
+  position: relative;
+  z-index: 1;
+}
+
+.callout-box__lock strong {
+  color: var(--gold);
+}
+
+.callout-box__divider {
+  width: 60px;
+  height: 1px;
+  background: var(--border-gold-solid);
+  margin: 0 auto var(--space-lg);
+  position: relative;
+  z-index: 1;
+}
+
+.callout-box__guarantee {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  text-align: left;
+  max-width: 480px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.callout-box__guarantee svg {
+  flex-shrink: 0;
+  color: var(--success);
+  margin-top: 2px;
+}
+
+.callout-box__guarantee strong {
+  color: var(--text-primary);
+}
+
+
+/* --------------------------------------------------------
+   CHECKOUT FORM (APPLICATION)
+   -------------------------------------------------------- */
+
+.checkout-form {
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.checkout-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-gold);
+}
+
+@media (min-width: 768px) {
+  .checkout-form {
+    padding: var(--space-2xl);
+  }
+}
+
+.checkout-form__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 480px) {
+  .checkout-form__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* --------------------------------------------------------
+   FORM ELEMENTS (shared with quote-form.css patterns)
+   -------------------------------------------------------- */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group--full {
+  grid-column: 1 / -1;
+}
+
+.form-label {
+  display: block;
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-sm);
+}
+
+.form-label .required {
+  color: var(--gold);
+}
+
+.form-input {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-fast),
+              box-shadow var(--transition-fast);
+}
+
+.form-input::placeholder {
+  color: var(--text-muted);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px var(--gold-glow);
+}
+
+.form-input:hover:not(:focus) {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  padding-right: 3rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23c9a96e' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1.25rem center;
+  background-size: 12px 8px;
+}
+
+.form-select option {
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: var(--lh-normal);
+}
+
+/* Error states */
+.form-group--error .form-input {
+  border-color: var(--error);
+}
+
+.form-group--error .form-input:focus {
+  box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.15);
+}
+
+.form-error {
+  font-size: var(--fs-xs);
+  color: var(--error);
+  margin-top: var(--space-xs);
+  min-height: 0;
+}
+
+/* Input with icon */
+.form-input-icon-wrapper {
+  position: relative;
+}
+
+.form-input-icon {
+  position: absolute;
+  left: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.form-input--icon {
+  padding-left: 3.25rem;
+}
+
+
+/* --------------------------------------------------------
+   CHECKOUT BUTTONS
+   -------------------------------------------------------- */
+
+.checkout-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: 1.15rem 2.5rem;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background var(--transition-base),
+              color var(--transition-base),
+              box-shadow var(--transition-base),
+              transform var(--transition-fast),
+              border-color var(--transition-base);
+}
+
+.checkout-btn--primary {
+  width: 100%;
+  margin-top: var(--space-xl);
+  color: var(--bg-primary);
+  background: var(--gold);
+  border: 1px solid var(--gold);
+}
+
+.checkout-btn--primary:hover {
+  background: var(--gold-light);
+  box-shadow: var(--shadow-gold-lg);
+  transform: translateY(-1px);
+  color: var(--bg-primary);
+}
+
+.checkout-btn--primary:active {
+  transform: translateY(0);
+}
+
+.checkout-btn--primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.checkout-btn--secondary {
+  color: var(--text-secondary);
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  padding: 1rem 1.5rem;
+}
+
+.checkout-btn--secondary:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* Loading state */
+.checkout-btn--submit .btn-loading {
+  display: none;
+}
+
+.checkout-btn--submit.btn--loading .btn-text {
+  display: none;
+}
+
+.checkout-btn--submit.btn--loading .btn-loading {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.spinner {
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+/* --------------------------------------------------------
+   STEP 2: PAYMENT LAYOUT
+   -------------------------------------------------------- */
+
+.payment-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+  .payment-layout {
+    grid-template-columns: 340px 1fr;
+    gap: var(--space-2xl);
+    align-items: start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .payment-layout {
+    grid-template-columns: 380px 1fr;
+  }
+}
+
+
+/* --------------------------------------------------------
+   ORDER SUMMARY
+   -------------------------------------------------------- */
+
+.order-summary {
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.order-summary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-gold);
+}
+
+.order-summary__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-lg);
+}
+
+.order-summary__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.order-summary__item-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.order-summary__item-name {
+  font-size: var(--fs-base);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.order-summary__item-period {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.order-summary__item-price {
+  font-family: var(--font-heading);
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  color: var(--gold);
+  white-space: nowrap;
+}
+
+.order-summary__divider {
+  height: 1px;
+  background: var(--border-subtle);
+  margin: var(--space-lg) 0;
+}
+
+.order-summary__benefits-title {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.order-summary__benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.order-summary__benefits-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+}
+
+.order-summary__benefits-list li svg {
+  flex-shrink: 0;
+}
+
+.order-summary__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-summary__total span:first-child {
+  font-size: var(--fs-base);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.order-summary__total-amount {
+  font-family: var(--font-heading);
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.order-summary__grandfathered {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--fs-xs);
+  color: var(--gold);
+  margin-top: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  background: rgba(201, 169, 110, 0.06);
+  border-radius: var(--radius-sm);
+}
+
+.order-summary__grandfathered svg {
+  flex-shrink: 0;
+}
+
+
+/* --------------------------------------------------------
+   PAYMENT FORM
+   -------------------------------------------------------- */
+
+.payment-form-wrapper {
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.payment-form-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-gold);
+}
+
+@media (min-width: 768px) {
+  .payment-form-wrapper {
+    padding: var(--space-2xl);
+  }
+}
+
+.payment-form__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xl);
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.payment-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+.payment-form__actions {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: var(--space-md);
+  margin-top: var(--space-sm);
+}
+
+@media (min-width: 480px) {
+  .payment-form__actions {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .payment-form__actions .checkout-btn--primary {
+    flex: 1;
+    margin-top: 0;
+  }
+
+  .payment-form__actions .checkout-btn--secondary {
+    flex-shrink: 0;
+  }
+}
+
+.payment-form__security {
+  text-align: center;
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.payment-form__reassurance {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-sm);
+}
+
+.payment-form__encryption {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+.payment-form__encryption svg {
+  color: var(--success);
+}
+
+
+/* --------------------------------------------------------
+   STEP 3: CONFIRMATION
+   -------------------------------------------------------- */
+
+.confirmation {
+  text-align: center;
+  padding: var(--space-3xl) var(--space-xl);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Animated checkmark */
+.confirmation__icon {
+  margin-bottom: var(--space-xl);
+}
+
+.confirmation__checkmark-circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: var(--gold);
+  fill: none;
+  animation: checkmarkCircle 0.6s ease-in-out forwards;
+}
+
+.confirmation__checkmark-path {
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  stroke: var(--gold);
+  stroke-width: 3;
+  stroke-linecap: round;
+  animation: checkmarkPath 0.3s ease-in-out 0.6s forwards;
+}
+
+@keyframes checkmarkCircle {
+  0% {
+    stroke-dashoffset: 166;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes checkmarkPath {
+  0% {
+    stroke-dashoffset: 48;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.confirmation__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+  .confirmation__title {
+    font-size: var(--fs-3xl);
+  }
+}
+
+.confirmation__message {
+  font-size: var(--fs-base);
+  color: var(--text-secondary);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-xl);
+}
+
+.confirmation__message strong {
+  color: var(--text-primary);
+}
+
+.confirmation__notice {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-lg);
+  background: rgba(201, 169, 110, 0.06);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xl);
+}
+
+.confirmation__notice svg {
+  flex-shrink: 0;
+  color: var(--gold);
+}
+
+.confirmation__btn {
+  display: inline-flex;
+  width: auto;
+  margin-top: 0;
+}
+
+
+/* --------------------------------------------------------
+   FOOTER OVERRIDES FOR CHECKOUT
+   Ensure footer styles work without importing footer.css
+   -------------------------------------------------------- */
+
+.footer {
+  background: var(--bg-footer, #080808);
+  border-top: 1px solid var(--border-gold);
+  padding-top: var(--space-3xl);
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
+}
+
+@media (min-width: 480px) {
+  .footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer__grid {
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  }
+}
+
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.footer__logo {
+  max-height: 40px;
+  width: auto;
+}
+
+.footer__brand-name {
+  font-family: var(--font-heading);
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.footer__brand-full {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: var(--fs-sm);
+  color: var(--gold);
+}
+
+.footer__brand-tagline {
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+}
+
+.footer__brand-desc {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  line-height: var(--lh-relaxed);
+  max-width: 300px;
+  margin-top: var(--space-sm);
+}
+
+.footer__heading {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gold);
+  margin-bottom: var(--space-md);
+}
+
+.footer__links ul,
+.footer__contact ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.footer__links ul li a,
+.footer__contact ul li a {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  transition: color var(--transition-fast),
+              padding-left var(--transition-fast);
+}
+
+.footer__links ul li a:hover,
+.footer__contact ul li a:hover {
+  color: var(--gold);
+  padding-left: var(--space-xs);
+}
+
+.footer__contact ul li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.footer__contact ul li svg {
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.footer__social {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border-gold);
+  border-radius: 50%;
+  color: var(--gold);
+  transition: background var(--transition-base),
+              color var(--transition-base),
+              border-color var(--transition-base),
+              box-shadow var(--transition-base);
+}
+
+.footer__social-link:hover {
+  background: var(--gold);
+  color: var(--bg-primary);
+  border-color: var(--gold);
+  box-shadow: var(--shadow-gold-sm);
+}
+
+.footer__bottom {
+  border-top: 1px solid var(--border-subtle);
+  padding: var(--space-lg) 0;
+}
+
+.footer__bottom-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .footer__bottom-inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.footer__copyright {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+.footer__bottom-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.footer__bottom-links a {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+
+.footer__bottom-links a:hover {
+  color: var(--gold);
+}
+
+
+/* --------------------------------------------------------
+   FADE-IN UP ANIMATION (utility)
+   -------------------------------------------------------- */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

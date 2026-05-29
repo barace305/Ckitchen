@@ -65,7 +65,7 @@
 
 /* Logo in Hero */
 .hero__logo {
-  max-width: 160px;
+  max-width: 200px;
   margin: 0 auto var(--space-xl);
   opacity: 0;
   animation: fadeInUp 0.8s var(--ease-out-expo) 0.2s forwards;
@@ -73,7 +73,7 @@
 
 @media (min-width: 768px) {
   .hero__logo {
-    max-width: 200px;
+    max-width: 260px;
     margin-bottom: var(--space-2xl);
   }
 }
@@ -105,33 +105,33 @@
 
 /* Tagline */
 .hero__tagline {
-  font-family: var(--font-accent);
-  font-style: italic;
-  font-size: var(--fs-md);
-  color: var(--gold);
-  margin-bottom: var(--space-md);
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-lg);
   opacity: 0;
   animation: fadeInUp 0.8s var(--ease-out-expo) 0.6s forwards;
 }
 
 @media (min-width: 768px) {
   .hero__tagline {
-    font-size: var(--fs-lg);
+    font-size: 1.35rem;
   }
 }
 
 @media (min-width: 1024px) {
   .hero__tagline {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
   }
 }
 
 /* Slogan / Description */
 .hero__slogan {
-  color: var(--text-secondary);
-  font-size: var(--fs-base);
+  color: var(--gold);
+  font-size: 1.25rem;
+  font-weight: 700;
   line-height: var(--lh-relaxed);
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto var(--space-xl);
   opacity: 0;
   animation: fadeInUp 0.8s var(--ease-out-expo) 0.8s forwards;
@@ -139,8 +139,14 @@
 
 @media (min-width: 768px) {
   .hero__slogan {
-    font-size: var(--fs-md);
+    font-size: 1.5rem;
     margin-bottom: var(--space-2xl);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero__slogan {
+    font-size: 1.8rem;
   }
 }
 

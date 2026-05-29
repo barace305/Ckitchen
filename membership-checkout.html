@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join CB Kitchen — Apply for membership to our private luxury kitchen sourcing network. Exclusive contractor pricing, private catalog access, and dedicated project support for $150/year.">
+    <meta name="keywords" content="CB Kitchen membership, contractor network, luxury kitchen sourcing, contractor pricing, membership application">
+    <meta name="author" content="CB Kitchen">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Join CB Kitchen — Membership Application">
+    <meta property="og:description" content="Apply for membership to our private luxury kitchen sourcing network. Exclusive contractor pricing at $150/year.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cbkitchen.io/membership-checkout">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Join CB Kitchen — Membership Application">
+    <meta name="twitter:description" content="Apply for membership to our private luxury kitchen sourcing network. Exclusive contractor pricing at $150/year.">
+
+    <title>Join CB Kitchen — Membership Application</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- CHECKOUT HEADER                                            -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <header class="checkout-header">
+        <div class="checkout-header__container container">
+            <a href="index.html" class="checkout-header__logo" aria-label="CB Kitchen Home">
+                <img src="assets/images/logo.png" alt="CB Kitchen Logo" class="checkout-header__logo-img">
+            </a>
+            <a href="index.html" class="checkout-header__back">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+                Back to Home
+            </a>
+        </div>
+    </header>
+
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- CHECKOUT MAIN                                              -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <main class="checkout-main">
+        <div class="container container--lg">
+
+            <!-- Page Title -->
+            <div class="checkout-title">
+                <div class="section-header__accent"></div>
+                <h1 class="checkout-title__heading">Join the <span class="text-gold">Private Network</span></h1>
+                <p class="checkout-title__sub">Apply for membership to CB Kitchen's exclusive contractor sourcing network.</p>
+            </div>
+
+
+            <!-- ─────────────────────────────────────────────────── -->
+            <!-- STEP INDICATOR                                      -->
+            <!-- ─────────────────────────────────────────────────── -->
+            <div class="step-indicator" aria-label="Checkout progress">
+                <div class="step-indicator__track">
+                    <div class="step-indicator__progress" id="step-progress"></div>
+                </div>
+                <div class="step-indicator__step active" data-step="1">
+                    <div class="step-indicator__circle">
+                        <span class="step-indicator__number">1</span>
+                        <svg class="step-indicator__check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    <span class="step-indicator__label">Application</span>
+                </div>
+                <div class="step-indicator__step" data-step="2">
+                    <div class="step-indicator__circle">
+                        <span class="step-indicator__number">2</span>
+                        <svg class="step-indicator__check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    <span class="step-indicator__label">Payment</span>
+                </div>
+                <div class="step-indicator__step" data-step="3">
+                    <div class="step-indicator__circle">
+                        <span class="step-indicator__number">3</span>
+                        <svg class="step-indicator__check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    <span class="step-indicator__label">Confirmation</span>
+                </div>
+            </div>
+
+
+            <!-- ─────────────────────────────────────────────────── -->
+            <!-- STEP 1 — MEMBERSHIP APPLICATION                     -->
+            <!-- ─────────────────────────────────────────────────── -->
+            <section class="checkout-step checkout-step--active" id="step-1" aria-label="Step 1: Membership Application">
+
+                <!-- Founding Member Callout -->
+                <div class="callout-box">
+                    <div class="callout-box__badge">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        Founding Member
+                    </div>
+                    <h2 class="callout-box__price">$150<span>/year</span></h2>
+                    <p class="callout-box__lock">Lock in your membership at our founding rate. This price will <strong>never increase</strong> for early members.</p>
+                    <div class="callout-box__divider"></div>
+                    <p class="callout-box__guarantee">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        All applications are reviewed within 24–48 hours. If your application is denied, you will receive a <strong>full refund</strong> — no questions asked.
+                    </p>
+                </div>
+
+                <!-- Application Form -->
+                <form class="checkout-form" id="application-form" novalidate>
+                    <div class="checkout-form__grid">
+
+                        <!-- Full Name -->
+                        <div class="form-group" id="form-group-fullname">
+                            <label for="app-fullname" class="form-label">Full Name <span class="required">*</span></label>
+                            <input type="text" id="app-fullname" name="fullName" class="form-input" placeholder="John Smith" required autocomplete="name">
+                            <span class="form-error" id="error-fullname"></span>
+                        </div>
+
+                        <!-- Company -->
+                        <div class="form-group" id="form-group-company">
+                            <label for="app-company" class="form-label">Company / Business Name <span class="required">*</span></label>
+                            <input type="text" id="app-company" name="company" class="form-input" placeholder="Smith Contracting LLC" required autocomplete="organization">
+                            <span class="form-error" id="error-company"></span>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group" id="form-group-email">
+                            <label for="app-email" class="form-label">Email <span class="required">*</span></label>
+                            <input type="email" id="app-email" name="email" class="form-input" placeholder="you@company.com" required autocomplete="email">
+                            <span class="form-error" id="error-email"></span>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="form-group" id="form-group-phone">
+                            <label for="app-phone" class="form-label">Phone <span class="required">*</span></label>
+                            <input type="tel" id="app-phone" name="phone" class="form-input" placeholder="(555) 123-4567" required autocomplete="tel">
+                            <span class="form-error" id="error-phone"></span>
+                        </div>
+
+                        <!-- City / State -->
+                        <div class="form-group form-group--full" id="form-group-location">
+                            <label for="app-location" class="form-label">City / State</label>
+                            <input type="text" id="app-location" name="location" class="form-input" placeholder="Miami, FL" autocomplete="address-level2">
+                            <span class="form-error" id="error-location"></span>
+                        </div>
+
+                        <!-- Business Type -->
+                        <div class="form-group" id="form-group-business-type">
+                            <label for="app-business-type" class="form-label">Business Type <span class="required">*</span></label>
+                            <select id="app-business-type" name="businessType" class="form-input form-select" required>
+                                <option value="" disabled selected>Select business type</option>
+                                <option value="general-contractor">General Contractor</option>
+                                <option value="kitchen-bath-remodeler">Kitchen/Bath Remodeler</option>
+                                <option value="home-builder">Home Builder</option>
+                                <option value="developer">Developer</option>
+                                <option value="interior-designer">Interior Designer</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <span class="form-error" id="error-business-type"></span>
+                        </div>
+
+                        <!-- Years of Experience -->
+                        <div class="form-group" id="form-group-experience">
+                            <label for="app-experience" class="form-label">Years of Experience</label>
+                            <select id="app-experience" name="experience" class="form-input form-select">
+                                <option value="" disabled selected>Select experience</option>
+                                <option value="1-3">1–3 years</option>
+                                <option value="3-5">3–5 years</option>
+                                <option value="5-10">5–10 years</option>
+                                <option value="10-20">10–20 years</option>
+                                <option value="20+">20+ years</option>
+                            </select>
+                        </div>
+
+                        <!-- Monthly Investment -->
+                        <div class="form-group form-group--full" id="form-group-investment">
+                            <label for="app-investment" class="form-label">Estimated Monthly Investment in Kitchens/Cabinetry</label>
+                            <select id="app-investment" name="monthlyInvestment" class="form-input form-select">
+                                <option value="" disabled selected>Select range</option>
+                                <option value="under-5k">Under $5,000</option>
+                                <option value="5k-15k">$5,000 – $15,000</option>
+                                <option value="15k-50k">$15,000 – $50,000</option>
+                                <option value="50k-100k">$50,000 – $100,000</option>
+                                <option value="100k-plus">$100,000+</option>
+                            </select>
+                        </div>
+
+                        <!-- Business Description -->
+                        <div class="form-group form-group--full" id="form-group-description">
+                            <label for="app-description" class="form-label">Brief Description of Your Business &amp; Projects</label>
+                            <textarea id="app-description" name="description" class="form-input form-textarea" rows="4" placeholder="Tell us about your business — what types of projects you take on, your typical project scope, and what you're looking for from CB Kitchen..."></textarea>
+                        </div>
+
+                    </div>
+
+                    <!-- Continue Button -->
+                    <button type="submit" class="checkout-btn checkout-btn--primary" id="btn-continue-payment">
+                        <span class="btn-text">Continue to Payment</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </button>
+                </form>
+            </section>
+
+
+            <!-- ─────────────────────────────────────────────────── -->
+            <!-- STEP 2 — PAYMENT                                    -->
+            <!-- ─────────────────────────────────────────────────── -->
+            <section class="checkout-step" id="step-2" aria-label="Step 2: Payment">
+
+                <div class="payment-layout">
+                    <!-- Order Summary -->
+                    <div class="order-summary">
+                        <h3 class="order-summary__title">Order Summary</h3>
+
+                        <div class="order-summary__item">
+                            <div class="order-summary__item-info">
+                                <span class="order-summary__item-name">CB Kitchen Private Network</span>
+                                <span class="order-summary__item-period">Annual Membership</span>
+                            </div>
+                            <span class="order-summary__item-price">$150.00</span>
+                        </div>
+
+                        <div class="order-summary__divider"></div>
+
+                        <div class="order-summary__benefits">
+                            <h4 class="order-summary__benefits-title">What's Included</h4>
+                            <ul class="order-summary__benefits-list">
+                                <li>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Private Catalog Access
+                                </li>
+                                <li>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Exclusive Contractor Pricing
+                                </li>
+                                <li>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Unlimited Quote Requests
+                                </li>
+                                <li>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Priority Quote Processing
+                                </li>
+                                <li>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Dedicated Project Support
+                                </li>
+                                <li>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Logistics &amp; Shipping Coordination
+                                </li>
+                                <li>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Global Sourcing Relationships
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="order-summary__divider"></div>
+
+                        <div class="order-summary__total">
+                            <span>Total Today</span>
+                            <span class="order-summary__total-amount">$150.00</span>
+                        </div>
+
+                        <p class="order-summary__grandfathered">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            Founding rate — grandfathered for life
+                        </p>
+                    </div>
+
+                    <!-- Payment Form -->
+                    <div class="payment-form-wrapper">
+                        <h3 class="payment-form__title">Payment Details</h3>
+
+                        <!-- STRIPE: Replace these inputs with Stripe Elements -->
+                        <!-- When integrating Stripe, mount cardNumber, cardExpiry, and cardCvc Elements -->
+                        <!-- into the respective #stripe-card-*, #stripe-expiry-*, #stripe-cvc-* containers -->
+
+                        <form class="payment-form" id="payment-form" novalidate>
+                            <!-- Card Number -->
+                            <div class="form-group form-group--full" id="form-group-card-number">
+                                <label for="pay-card-number" class="form-label">Card Number</label>
+                                <div class="form-input-icon-wrapper">
+                                    <svg class="form-input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                                    <!-- STRIPE: Replace this input with Stripe CardNumber Element -->
+                                    <input type="text" id="pay-card-number" name="cardNumber" class="form-input form-input--icon" placeholder="1234 5678 9012 3456" maxlength="19" inputmode="numeric" autocomplete="cc-number">
+                                </div>
+                                <span class="form-error" id="error-card-number"></span>
+                            </div>
+
+                            <!-- Expiration / CVC Row -->
+                            <div class="payment-form__row">
+                                <div class="form-group" id="form-group-card-expiry">
+                                    <label for="pay-card-expiry" class="form-label">Expiration Date</label>
+                                    <!-- STRIPE: Replace this input with Stripe CardExpiry Element -->
+                                    <input type="text" id="pay-card-expiry" name="cardExpiry" class="form-input" placeholder="MM / YY" maxlength="7" inputmode="numeric" autocomplete="cc-exp">
+                                    <span class="form-error" id="error-card-expiry"></span>
+                                </div>
+                                <div class="form-group" id="form-group-card-cvc">
+                                    <label for="pay-card-cvc" class="form-label">CVC</label>
+                                    <!-- STRIPE: Replace this input with Stripe CardCvc Element -->
+                                    <input type="text" id="pay-card-cvc" name="cardCvc" class="form-input" placeholder="123" maxlength="4" inputmode="numeric" autocomplete="cc-csc">
+                                    <span class="form-error" id="error-card-cvc"></span>
+                                </div>
+                            </div>
+
+                            <!-- Name on Card -->
+                            <div class="form-group form-group--full" id="form-group-card-name">
+                                <label for="pay-card-name" class="form-label">Name on Card</label>
+                                <input type="text" id="pay-card-name" name="cardName" class="form-input" placeholder="John Smith" autocomplete="cc-name">
+                                <span class="form-error" id="error-card-name"></span>
+                            </div>
+
+                            <!-- Billing ZIP -->
+                            <div class="form-group form-group--full" id="form-group-card-zip">
+                                <label for="pay-card-zip" class="form-label">Billing ZIP Code</label>
+                                <input type="text" id="pay-card-zip" name="billingZip" class="form-input" placeholder="33101" maxlength="10" inputmode="numeric" autocomplete="postal-code">
+                                <span class="form-error" id="error-card-zip"></span>
+                            </div>
+
+                            <!-- Action Buttons -->
+                            <div class="payment-form__actions">
+                                <button type="button" class="checkout-btn checkout-btn--secondary" id="btn-back-application">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+                                    Back
+                                </button>
+                                <button type="submit" class="checkout-btn checkout-btn--primary checkout-btn--submit" id="btn-activate-membership">
+                                    <span class="btn-text">Activate Membership — $150/year</span>
+                                    <span class="btn-loading" aria-hidden="true">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" class="spinner"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="31.4" stroke-linecap="round"/></svg>
+                                        Processing Payment...
+                                    </span>
+                                </button>
+                            </div>
+
+                            <!-- Security Line -->
+                            <div class="payment-form__security">
+                                <p class="payment-form__reassurance">Secure payment. Cancel anytime. Full refund if application denied.</p>
+                                <div class="payment-form__encryption">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                                    <span>Secured with 256-bit encryption</span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ─────────────────────────────────────────────────── -->
+            <!-- STEP 3 — CONFIRMATION                               -->
+            <!-- ─────────────────────────────────────────────────── -->
+            <section class="checkout-step" id="step-3" aria-label="Step 3: Confirmation">
+                <div class="confirmation">
+                    <!-- Animated Checkmark -->
+                    <div class="confirmation__icon">
+                        <svg class="confirmation__checkmark" viewBox="0 0 52 52" width="80" height="80">
+                            <circle class="confirmation__checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                            <path class="confirmation__checkmark-path" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                        </svg>
+                    </div>
+
+                    <h2 class="confirmation__title">Application Submitted Successfully</h2>
+
+                    <p class="confirmation__message">
+                        Thank you for applying to the <strong>CB Kitchen Private Network</strong>. Your application is under review.
+                        You will receive a confirmation email within <strong>24–48 business hours</strong>.
+                    </p>
+
+                    <div class="confirmation__notice">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        <span>Your card will only be charged once your application is approved.</span>
+                    </div>
+
+                    <a href="index.html" class="checkout-btn checkout-btn--primary confirmation__btn">
+                        <span>Return to CB Kitchen</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- FOOTER                                                      -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <!-- Brand Column -->
+                <div class="footer__brand">
+                    <img src="assets/images/logo.png" alt="CB Kitchen" class="footer__logo">
+                    <p class="footer__brand-name">CB Kitchen</p>
+                    <p class="footer__brand-full">Custom Built Kitchen</p>
+                    <p class="footer__brand-tagline">Luxury Contractor Network</p>
+                    <p class="footer__brand-desc">Private luxury sourcing network for contractors, builders, and developers who demand premium quality at better margins.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer__links">
+                    <h4 class="footer__heading">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#membership">Membership</a></li>
+                        <li><a href="index.html#collections">Collections</a></li>
+                        <li><a href="index.html#how-it-works">How It Works</a></li>
+                        <li><a href="index.html#quality">Quality</a></li>
+                        <li><a href="index.html#quote">Request a Quote</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="footer__links">
+                    <h4 class="footer__heading">Services</h4>
+                    <ul>
+                        <li><a href="index.html#collections">Luxury Kitchens</a></li>
+                        <li><a href="index.html#collections">Custom Cabinets</a></li>
+                        <li><a href="index.html#collections">Bathroom Vanities</a></li>
+                        <li><a href="index.html#collections">Walk-In Closets</a></li>
+                        <li><a href="index.html#collections">Commercial Projects</a></li>
+                        <li><a href="index.html#catalog">Private Catalog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer__contact">
+                    <h4 class="footer__heading">Contact</h4>
+                    <ul>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                            <a href="https://cbkitchen.io" target="_blank">CBKitchen.io</a>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <a href="mailto:info@cbkitchen.io">info@cbkitchen.io</a>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <a href="tel:+1234567890">(123) 456-7890</a>
+                        </li>
+                    </ul>
+
+                    <!-- Social Icons -->
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="LinkedIn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="YouTube">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-inner">
+                    <p class="footer__copyright">© <span id="footer-year">2026</span> CB Kitchen. All rights reserved.</p>
+                    <div class="footer__bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="admin/index.html">Admin Portal</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="js/checkout.js"></script>
+
+</body>
+</html>
